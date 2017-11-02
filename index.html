@@ -14,10 +14,15 @@
     <!-- Displaying Loading... while data is loading -->
     <div class="loading" style="text-align:center">Loading ... </div>
 
+    <div class="refresh">
+      <input onclick="loadMainInfo()" id="refreshBtn" type="hidden" style="width: 120px; margin: 0 auto;" value="Refresh" />
+    </div>
+
     <div id="wrap">       <!-- made wrape to allign all records -->
       <div class="news">  <!-- <p> will be created here for every news topic -->
       </div>
     </div>
+
     <img  src="img/404.jpg"
           alt="Page Not Found (404)."
           style="position: absolute; left: 50%; top: 50%; margin-left: -285px; margin-top: -190px; display: none;"
