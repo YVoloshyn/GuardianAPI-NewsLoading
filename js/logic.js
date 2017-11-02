@@ -1,13 +1,19 @@
 $(document).ready(function() {
   const $loading = $('div.loading');
-  const $news = $("div.news");
+  const $news    = $('div.news');
+  const $heading = $('#heading');
 
-  $.get("http://content.guardianapis.com/search?api-key=test", function(data) {
-    var news = data.response.results;
-      for (var i = 0; i < news.length; i++) {
-        var article = news[i];
-        $news.append('<p>' + article.webTitle + '</p>');
-      }
-      $loading.hide()
+  var dataLoading = $.get("http://content.guardianapis.com/search?api-key=test", function(data) {
+      var news = data.response.results;
+        for (var i = 0; i < news.length; i++) {
+          var article = news[i];
+          $news.append('<p>' + article.webTitle + '</p>');
+        }
+        $loading.hide();
+  }).fail(function() {
+    $heading.hide();
+    $loading.hide();
+    document.getElementById("errImage").style.display = "block";
   });
+
 });
