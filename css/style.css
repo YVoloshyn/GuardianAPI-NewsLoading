@@ -7,7 +7,7 @@ p {
   display: list-item;
   list-style-type: disc;
   list-style-position: inside;
-  font-size: 17px;
+  font-size: 19px;
 }
 #wrap {
     float: left;
@@ -17,5 +17,6 @@ p {
 .news {
     float: left;
     position: relative;
-    left: -50%;
+    left: -40%;
+    width: 750px;
 }
