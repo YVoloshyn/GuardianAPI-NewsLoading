@@ -11,7 +11,7 @@ p {
     position: relative;
     left: 50%;
 }
-#my_news {
+.news {
     float: left;
     position: relative;
     left: -50%;

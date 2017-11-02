@@ -1,11 +1,12 @@
-xmlhttp=new XMLHttpRequest();
-xmlhttp.open("GET","http://content.guardianapis.com/search?api-key=test",false);
-xmlhttp.send();
+$(document).ready(function() {
+  const $news = $("div.news");
 
-var resp = JSON.parse(xmlhttp.responseText);
+  $.get("http://content.guardianapis.com/search?api-key=test", function(data) {
+           var news = data.response.results;
 
-for ( var each in resp.response.results ) {
-  var nameOfNews = resp.response.results[each].webTitle;
-  var id = "p" + (parseFloat(each)+1);
-  document.getElementById(id).innerHTML = nameOfNews;
-}
+           for (var i = 0; i < news.length; i++) {
+             var article = news[i];
+             $news.append('<p>' + article.webTitle + '</p>');
+           }
+        });
+});
