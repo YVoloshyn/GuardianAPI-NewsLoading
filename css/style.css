@@ -1,0 +1,18 @@
+h1 {
+    text-align:center;
+}
+p {
+  display: list-item;
+  list-style-type: disc;
+  list-style-position: inside;
+}
+#wrap {
+    float: left;
+    position: relative;
+    left: 50%;
+}
+#my_news {
+    float: left;
+    position: relative;
+    left: -50%;
+}
