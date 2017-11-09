@@ -11,9 +11,21 @@ h1 {
     font-family: Georgia;
     font-size: 50px;
 }
-p {
+h2 {
+  display: none;
+}
+h5 {
   display: list-item;
   list-style-type: disc;
   list-style-position: inside;
   font-size: 19px;
+  border-style: ridge;
+  padding: 1px;
+  margin: 0;
+}
+figure {
+  display: none;
+}
+ul {
+  display: none;
 }
