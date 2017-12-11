@@ -1,3 +1,4 @@
+/*Created by Yaroslav Voloshyn*/
 $(document).ready(function() {
   loadMainInfo();
   $(document).on('click', function( event ) {
